@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Local preview helpers (not part of the site)
+serve.js
+serve.py
+
+# Editor / OS cruft
+Thumbs.db
+*.swp
+.vscode/
