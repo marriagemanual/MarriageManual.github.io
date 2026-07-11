@@ -116,6 +116,37 @@
     el.textContent = new Date().getFullYear();
   });
 
+  /* ---------- Cookie notice ----------
+     Proportionate to this site's low tracking footprint: an informational
+     notice + a remembered acknowledgement. It does NOT currently gate any
+     scripts, because the site runs no analytics/ad-tracking — only the
+     functional MailerLite signup form and Google Fonts.
+     IMPORTANT: if you later add Google Analytics, the Meta pixel, or any
+     ad-tracking, upgrade this to a real consent manager that loads those
+     scripts ONLY after the visitor accepts. */
+  (function cookieNotice() {
+    var KEY = "mom-cookie-consent";
+    try {
+      if (localStorage.getItem(KEY)) return; // already acknowledged
+    } catch (e) {
+      return; // storage blocked (e.g. private mode) — don't nag
+    }
+    var bar = document.createElement("div");
+    bar.className = "cookie-banner";
+    bar.setAttribute("role", "dialog");
+    bar.setAttribute("aria-label", "Cookie notice");
+    bar.innerHTML =
+      '<p>We use a couple of cookies to run the signup form and keep the site working — nothing is sold on, and there’s no ad tracking. <a href="privacy.html">Privacy &amp; cookies</a>.</p>' +
+      '<div class="cookie-actions"><button type="button" class="btn cookie-accept">Got it</button></div>';
+    document.body.appendChild(bar);
+    requestAnimationFrame(function () { bar.classList.add("in"); });
+    bar.querySelector(".cookie-accept").addEventListener("click", function () {
+      try { localStorage.setItem(KEY, "1"); } catch (e) { /* ignore */ }
+      bar.classList.remove("in");
+      setTimeout(function () { bar.remove(); }, 450);
+    });
+  })();
+
   /* ---------- Basic spam protection for the MailerLite form ----------
      Two cheap, no-server signals that stop the majority of bot sign-ups:
        1. Honeypot — a hidden decoy field (name="ml-website"). Humans never

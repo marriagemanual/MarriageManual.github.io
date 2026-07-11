@@ -677,6 +677,55 @@ p  { color: var(--ink); }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
 }
 
+/* ---------- Legal pages (privacy / cookies) ---------- */
+.legal { max-width: 780px; margin-inline: auto; }
+.legal h1 { font-size: clamp(2rem, 4vw, 2.8rem); }
+.legal .updated { color: var(--ink-muted); font-size: .9rem; margin-top: 8px; }
+.legal > p { margin-top: 16px; color: var(--ink); line-height: 1.75; }
+.legal h2 { font-size: clamp(1.25rem, 2vw, 1.5rem); margin-top: 42px; }
+.legal h3 { font-size: 1.1rem; margin-top: 26px; color: var(--deep-rose); }
+.legal ul { margin: 14px 0 14px 22px; display: grid; gap: 10px; }
+.legal li { color: var(--ink); line-height: 1.7; }
+.legal a { font-weight: 500; }
+.legal .callout {
+  background: var(--cream-deep);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin-top: 34px;
+  color: var(--ink);
+}
+
+/* ---------- Cookie notice ---------- */
+.cookie-banner {
+  position: fixed;
+  left: 16px; right: 16px; bottom: 16px;
+  max-width: 720px;
+  margin-inline: auto;
+  z-index: 200;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  transform: translateY(160%);
+  opacity: 0;
+  transition: transform .5s var(--ease), opacity .5s var(--ease);
+}
+.cookie-banner.in { transform: none; opacity: 1; }
+.cookie-banner p { flex: 1 1 320px; margin: 0; font-size: .88rem; line-height: 1.55; color: var(--ink); }
+.cookie-banner .cookie-actions { flex: 0 0 auto; }
+.cookie-banner .btn { padding: .6em 1.5em; font-size: .95rem; }
+@media (max-width: 520px) {
+  .cookie-banner { flex-direction: column; align-items: stretch; text-align: center; }
+  .cookie-banner .btn { width: 100%; }
+}
+
 /* Radar draw-on animation (used in hero + brand mark) */
 .radar-draw path, .radar-draw circle, .radar-draw line, .radar-draw polygon {
   stroke-dasharray: var(--len, 400);
