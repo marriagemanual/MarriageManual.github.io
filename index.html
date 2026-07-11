@@ -12,11 +12,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/hero.jpg" />
 
-  <!-- Fonts: Fraunces (display) + Inter (body) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-
+  <!-- Fonts (Fraunces + Inter) are self-hosted via @font-face in styles.css — no third-party font calls -->
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="assets/motif.png" type="image/png" />
 </head>
@@ -166,7 +162,7 @@
                  and leave the "BRAND OVERRIDES" <style> block in place.
                  ============================================================ -->
 
-            <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1783523");</style>
+            <!-- (MailerLite's Google-hosted font @import removed — the form uses the site's self-hosted Inter via the brand overrides below) -->
             <style type="text/css">
             /* LOADER */
             .ml-form-embedSubmitLoad { display: inline-block; width: 20px; height: 20px; }

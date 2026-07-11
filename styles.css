@@ -3,6 +3,20 @@
    Palette, type, layout and components for index.html + book.html
    ============================================================= */
 
+/* ---------- Self-hosted fonts (no third-party font calls) ----------
+   Fraunces (display) + Inter (body), served from /assets/fonts so no
+   visitor data is sent to Google. font-display: swap keeps text visible
+   while the fonts load. Inter roman uses the variable font (one file
+   covers weights 400–700); everything else is a static weight. */
+@font-face { font-family:'Fraunces'; font-style:normal; font-weight:400; font-display:swap; src:url('assets/fonts/fraunces-400.ttf') format('truetype'); }
+@font-face { font-family:'Fraunces'; font-style:normal; font-weight:600; font-display:swap; src:url('assets/fonts/fraunces-600.ttf') format('truetype'); }
+@font-face { font-family:'Fraunces'; font-style:normal; font-weight:700; font-display:swap; src:url('assets/fonts/fraunces-700.ttf') format('truetype'); }
+@font-face { font-family:'Fraunces'; font-style:italic; font-weight:400; font-display:swap; src:url('assets/fonts/fraunces-400-italic.ttf') format('truetype'); }
+@font-face { font-family:'Fraunces'; font-style:italic; font-weight:600; font-display:swap; src:url('assets/fonts/fraunces-600-italic.ttf') format('truetype'); }
+@font-face { font-family:'Inter'; font-style:normal; font-weight:100 900; font-display:swap; src:url('assets/fonts/inter-variable.ttf') format('truetype'); }
+@font-face { font-family:'Inter'; font-style:italic; font-weight:400; font-display:swap; src:url('assets/fonts/inter-400-italic.ttf') format('truetype'); }
+
+
 /* ---------- Design tokens ---------- */
 :root {
   /* Locked brand palette */
