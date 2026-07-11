@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="The Marriage Operating Manual compass mark">
+  <!-- compass bezel -->
+  <circle cx="50" cy="50" r="46" fill="none" stroke="#C6A15B" stroke-width="2.4"/>
+  <!-- secondary (diagonal) points -->
+  <g>
+    <g transform="rotate(45 50 50)"><polygon points="50,24 47,48 50,50" fill="#C6A15B"/><polygon points="50,24 53,48 50,50" fill="#DcbA7c"/></g>
+    <g transform="rotate(135 50 50)"><polygon points="50,24 47,48 50,50" fill="#C6A15B"/><polygon points="50,24 53,48 50,50" fill="#DcbA7c"/></g>
+    <g transform="rotate(225 50 50)"><polygon points="50,24 47,48 50,50" fill="#C6A15B"/><polygon points="50,24 53,48 50,50" fill="#DcbA7c"/></g>
+    <g transform="rotate(315 50 50)"><polygon points="50,24 47,48 50,50" fill="#C6A15B"/><polygon points="50,24 53,48 50,50" fill="#DcbA7c"/></g>
+  </g>
+  <!-- primary (cardinal) points: wine + rose facets -->
+  <g>
+    <g transform="rotate(0 50 50)"><polygon points="50,8 45,46 50,50" fill="#6E2233"/><polygon points="50,8 55,46 50,50" fill="#C4456B"/></g>
+    <g transform="rotate(90 50 50)"><polygon points="50,8 45,46 50,50" fill="#6E2233"/><polygon points="50,8 55,46 50,50" fill="#C4456B"/></g>
+    <g transform="rotate(180 50 50)"><polygon points="50,8 45,46 50,50" fill="#6E2233"/><polygon points="50,8 55,46 50,50" fill="#C4456B"/></g>
+    <g transform="rotate(270 50 50)"><polygon points="50,8 45,46 50,50" fill="#6E2233"/><polygon points="50,8 55,46 50,50" fill="#C4456B"/></g>
+  </g>
+  <!-- pivot -->
+  <circle cx="50" cy="50" r="4.6" fill="#FBF6EE" stroke="#C6A15B" stroke-width="1.8"/>
+</svg>
