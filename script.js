@@ -182,3 +182,28 @@
     }
   }
 })();
+
+/* ------------------------------------------------------------------
+   Hide the capture-card heading once MailerLite swaps in its success
+   message. MailerLite toggles inline display on .ml-form-successBody;
+   we watch for that and flag the card so the CSS can hide our own
+   "Send me the conversations" / "Name, email…" copy, which would
+   otherwise still be showing above "Thank you!".
+   ------------------------------------------------------------------ */
+(function () {
+  var card = document.querySelector(".capture-card");
+  if (!card) return;
+  var success = card.querySelector(".ml-form-successBody");
+  if (!success) return;
+
+  var sync = function () {
+    var shown = window.getComputedStyle(success).display !== "none";
+    card.classList.toggle("is-submitted", shown);
+  };
+
+  new MutationObserver(sync).observe(success, {
+    attributes: true,
+    attributeFilter: ["style", "class"]
+  });
+  sync();
+})();

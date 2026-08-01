@@ -755,3 +755,10 @@ p  { color: var(--ink); }
   .radar-draw path, .radar-draw circle, .radar-draw line, .radar-draw polygon { stroke-dashoffset: 0; }
   .radar-draw polygon.fill { fill-opacity: 0.16; }
 }
+
+/* When the MailerLite form reports success it hides its own body and shows
+   .ml-form-successBody — but it knows nothing about the card heading we wrote
+   above the embed, which otherwise sits there still saying "Name, email…"
+   next to a thank-you message. script.js flags the card; we hide them here. */
+.capture-card.is-submitted h3,
+.capture-card.is-submitted .form-sub { display: none; }
